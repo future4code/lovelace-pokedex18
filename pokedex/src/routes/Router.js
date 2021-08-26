@@ -7,19 +7,19 @@ import DetailScreen from "../screen/DetailScreen/DetailScreen"
 const Router = () => {
     return (
         <BrowserRouter>
-             <Switch>
-                 <Route exact path={"/"}>
-                     <HomeScreen/>
-                 </Route>
+            <Switch>
+                <Route exact path={"/"}>
+                    <HomeScreen />
+                </Route>
 
-                 <Route exact path={"/pokedex"}>
-                     <PokedexScreen/>
-                 </Route>
-            
-                 <Route exact path={"/detalhes"}>
-                     <DetailScreen/>
-                 </Route>
-             </Switch>
+                <Route exact path={"/pokedex"}>
+                    <PokedexScreen />
+                </Route>
+
+                <Route exact path={"/detalhes"}>
+                    <DetailScreen />
+                </Route>
+            </Switch>
         </BrowserRouter>
     )
 }
