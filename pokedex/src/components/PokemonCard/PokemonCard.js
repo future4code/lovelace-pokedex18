@@ -1,7 +1,23 @@
+import axios from "axios"
+import { useState } from "react"
+import { BASE_URL } from "../../constants/urls"
 import { CardContainer, Container, ContainerButton, Icon, Image, TopBar } from "./styled"
 
 
 const PokemonCard = () => {
+
+    // const renderPokemonImage = () => {
+    //     axios.get(`${BASE_URL}/pokemons/1`)
+
+    //     .then((res) => {
+    //         console.log(res)
+    //     })
+
+    //     .catch((err) => {
+    //         console.log(err)
+    //     })
+    // }
+
     return (
         <Container>
              <CardContainer>
@@ -10,7 +26,7 @@ const PokemonCard = () => {
                  </TopBar> 
 
                  <Image>
-                    <img src={"https://sm.ign.com/t/ign_br/screenshot/default/025pikachu-os-anime-4_3pym.1200.png"} alt={"Imagem de Pokemon"}/>
+                     <img src={""} alt={"Imagem de Pokemon"}/>
                 </Image>
 
                  <ContainerButton>
