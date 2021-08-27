@@ -13,9 +13,8 @@
 
 ### Imagens
 
-x-special/nautilus-clipboard
-copy
-file:///home/ivan/Documentos/pokedex.png
+![pokedex](https://user-images.githubusercontent.com/85263053/131185873-dcd311cf-6cd9-46c2-98c1-e1b7008f3877.png)
+
 
 ### Link Surge
 
