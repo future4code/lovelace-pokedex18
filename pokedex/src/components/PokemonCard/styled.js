@@ -2,10 +2,16 @@ import styled from "styled-components"
 
 
 export const Container = styled.div`
+   margin: 30px;
+   display: flex;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+`
+
+export const ContainerScreen = styled.div`
    display: grid;
    grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: repeat(3, 1fr);
-   gap: 20px;
    margin: 30px;
 `
 
@@ -13,7 +19,7 @@ export const CardContainer = styled.div`
    display: flex;
    border: 6px solid #07a0c3;
    width: 17vw;
-   height: 47vh;
+   height: 45vh;
    border-radius: 20px;
    flex-direction: column;
    justify-content: center;
@@ -44,8 +50,8 @@ export const Image = styled.div`
    align-items: center;
 
    img {
-       width: 300px;
-       height: 300px;
+       width: 250px;
+       height: 170px;
    }
 `
 
@@ -58,7 +64,7 @@ export const ContainerButton = styled.div`
    background-color: #07a0c3;
 
    button {
-    width: 150px;
+    width: 140px;
     height: 40px;
     border-radius: 5px;
     border: none;

@@ -3,9 +3,9 @@ export const goToHomeScreen = (history) => {
 }
 
 export const goToPokedexScreen = (history) => {
-     history.push("/pokedex")
+     history.push("/pokedex/")
 }
 
-export const goToDetailScreen = (history) => {
-    history.push("/detalhes")
+export const goToDetailScreen = (history, nome) => {
+    history.push(`/detalhes/${nome}`)
 }
