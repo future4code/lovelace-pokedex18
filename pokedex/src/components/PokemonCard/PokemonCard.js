@@ -1,22 +1,11 @@
-import axios from "axios"
-import { useState } from "react"
 import { BASE_URL } from "../../constants/urls"
+import useRequestData from "../../hooks/useRequestData"
 import { CardContainer, Container, ContainerButton, Icon, Image, TopBar } from "./styled"
 
 
-const PokemonCard = () => {
+const PokemonCard = (props) => {
 
-    // const renderPokemonImage = () => {
-    //     axios.get(`${BASE_URL}/pokemons/1`)
-
-    //     .then((res) => {
-    //         console.log(res)
-    //     })
-
-    //     .catch((err) => {
-    //         console.log(err)
-    //     })
-    // }
+    const renderPokemonImage = useRequestData(`${BASE_URL}/pokemon/${props.pokemons}`, {})
 
     return (
         <Container>
@@ -26,7 +15,7 @@ const PokemonCard = () => {
                  </TopBar> 
 
                  <Image>
-                     <img src={""} alt={"Imagem de Pokemon"}/>
+                  <img src={renderPokemonImage[0].sprites && renderPokemonImage[0].sprites.versions['generation-v']['black-white'].animated.front_default} alt={"Imagem de Pokemon"} />
                 </Image>
 
                  <ContainerButton>

@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
-
-export const ContainerHeader = styled.div`
+export const HeaderPokedex = styled.div`
    display: flex;
    border: 1px solid black;
    justify-content: center;
@@ -16,8 +15,8 @@ export const ContainerHeader = styled.div`
 
 export const Button = styled.button`
   display: flex;
-  width: 120px;
-  height: 40px;
+  width: 90px;
+  height: 50px;
   position: absolute;
   margin-right: 90%;
   justify-content: center;

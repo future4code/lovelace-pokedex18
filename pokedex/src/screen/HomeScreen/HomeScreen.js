@@ -2,35 +2,23 @@ import Header from "../../components/Header/Header"
 import PokemonCard from "../../components/PokemonCard/PokemonCard"
 import useRequestData from "../../hooks/useRequestData"
 import { BASE_URL } from "../../constants/urls"
-import { useEffect, useState } from "react"
-import axios from "axios"
+import { ContainerScreen } from "../../components/PokemonCard/styled"
 
 const HomeScreen = () => {
     
-    const [pokemonsList, setPokemonsList] = useState([])
+    const pokemonsList = useRequestData(`${BASE_URL}/pokemon/?offset=20&limit=20`, {})
 
-    useEffect(() => {
-        axios.get(`${BASE_URL}/pokemon/?offset=20&limit=20`)
-
-        .then((res) => {
-            console.log(res)
-            setPokemonsList(res.data.results)
-        })
-
-        .catch((err) => {
-            console.log(err)
-        })
-    }, [])
-
-    const renderPokemonList = pokemonsList.map((pokemons) => {
-        return <PokemonCard pokemons={pokemons} name={pokemons.name} key={pokemons.name} image={pokemons.sprites}/>
+    const renderPokemonsList = pokemonsList[0].results && pokemonsList[0].results.map((pokemon) => {
+            return <PokemonCard  key={pokemon.name} pokemons={pokemon.name}  />
     })
 
-       
+    
     return (
         <div>
             <Header />
-            {renderPokemonList}
+            <ContainerScreen>
+                 {renderPokemonsList}
+            </ContainerScreen>
         </div>
     )
 }

@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react"
+import axios from "axios"
 
-const useRequestData = (initialValue, url) => {
-  const [data, setData] = useState(initialValue);
+const useRequestData = (url, initialValue) => {
+  const [data, setData] = useState(initialValue)
 
   useEffect(() => {
     axios
       .get(url)
       .then((response) => {
-        setData(response.data);
+        setData(response.data)
       })
       .catch((error) => {
-        console.log(error);
-        alert("Ocorreu um erro, tente novamente");
+        console.log(error)
+        alert("Ocorreu um erro, tente novamente")
       });
-  }, [url]);
+  }, [url])
 
-  return [data, setData];
+  return [data, setData]
 };
 
-export default useRequestData;
+export default useRequestData
