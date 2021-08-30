@@ -1,16 +1,21 @@
-# POKEDEX
+## Pokedex
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+### O que funciona
 
-Link do Surge: www.link.com.br
+- A renderização dos cards com a lista de pokemons e as imagens.
+- As rotas estão funcionando.
 
-O que funciona:
-- Item 1
-- Item 2
 
-O que não funciona: 
-- Item 3
-- Item 4
+### O que não funciona
+
+- Adicionar pokemons á Pokédex.
+- Ver detalhes dos pokemons.
+
+### Link Surge
+
+http://gloriouuss-care.surge.sh/
+
+### Imagens
+
+![pokedex](https://user-images.githubusercontent.com/85263053/131185873-dcd311cf-6cd9-46c2-98c1-e1b7008f3877.png)
+
